@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .Squares{
+            background-color: black;
+            border: blue;
+            width: 30px;
+            height: 30px;
+        }
+        </style>
+    <table>
+        <div>
+            <tr>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+             </tr> 
+             <tr>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+             </tr> 
+             <tr>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+             </tr> 
+             <tr>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+                <td class="Squares"></td>
+             </tr>      
+        </div>
+    </table>
+    <script>
+        let gnabel =document.getElementsByClassName("Squares");
+        let count = 0;
+        
+        for(i=0;i<=gnabel.length;i++){
+            let element = gnabel.item(i);
+            let rndx=Math.floor(Math.random()*12)+1;
+            element.onclick= function(e){ 
+            if(rndx>=2&&rndx<=5){
+                element.style.backgroundColor="red";
+                element.innerHTML=rndx;
+                alert("game over!")
+
+            }else{
+                element.style.backgroundColor="green";
+                element.innerHTML=rndx;
+            }  
+        }
+        }
+        
+        // element.onclick= function(e){ 
+        //     if(rndx>=2&&rndx<=5){
+        //         element.style.backgroundColor="red";
+        //         element.innerHTML=rndx;
+        //     }else{
+        //         element.style.backgroundColor="green";
+        //         element.innerHTML=rndx;
+        //     }  
+        // }
+    </script>
+</body>
+</html>
